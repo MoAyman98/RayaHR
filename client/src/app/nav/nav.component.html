@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
         <img style="height: 50px;width: 50px;margin-left: 100px;" src="/assets/images/raya.png" alt="">
-        <a class="navbar-brand mx-2" href="#">Raya HR System</a>
+        <a class="navbar-brand mx-2" routerLink="/home">Raya HR System</a>
         <form style="margin-left: 900px;" class="collapse navbar-collapse" id="navbarCollapse" (submit)="logout()">
             <button *ngIf="(accountService.currentUser$ |async)" class="btn btn-outline-success" type="submit">Logout</button>
         </form>
