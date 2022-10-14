@@ -1,0 +1,18 @@
+<form style="margin-top: 200px;width: 600px;margin-left: 21%;" #loginForm="ngForm" (ngSubmit)="login()"
+    autocomplete="off" class="register py-2 px-5">
+    <!-- <h2 class="text-center text-primary">Welcome Back</h2>
+    <hr> -->
+    <div class="form-group mt-2">
+        <input type="text" class="form-control" name="Email" [(ngModel)]="model.Email" placeholder="Email" required
+            #email="ngModel">
+    </div>
+
+    <div class="form-group mt-2">
+        <input type="password" class="form-control" name="Password" [(ngModel)]="model.Password" placeholder="Password"
+            minlength="6" required #password="ngModel">
+    </div>
+
+    <div class="form-group text-center mt-2">
+        <button [disabled]="loginForm.invalid" class="btn btn-primary me-2" type="submit">Login</button>
+    </div>
+</form>
