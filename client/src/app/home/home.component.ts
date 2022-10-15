@@ -53,6 +53,10 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  updateHr() {
+    this.router.navigateByUrl("/update/"+this.Hr.hrid);
+  }
+
   approveHr() {
     this.hrService.approveHr(this.Hr.hrid).subscribe({
       next: () => {

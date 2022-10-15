@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UdwPmcBlQmqpuxONV48IdFpVpkSMLq6PxRKHC31TYTec4JRjSjupgvM20ZA89jz7AehQtCRpt4p582ooizZNhg==",
+  "dgSpecHash": "SRbBEFfJm/8hiFB4blB82NctbIzkTFoylKIGDeC0Pnkbqr1N5nHCz5jRfYOMGcnFTxNSyV0C50mL3ebHvHJy/w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lenovo\\RayaHR\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\lenovo\\RayaHR\\api\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lenovo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\lenovo\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

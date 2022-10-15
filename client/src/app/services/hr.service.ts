@@ -30,4 +30,8 @@ export class HrService {
   addHr(model : addHr) {
     return this.http.post(this.baseUrl + "hr",model);
   }
+
+  updateHr(model: hr) {
+    return this.http.put(this.baseUrl + "hr",model);
+  }
 }
