@@ -1,20 +1,47 @@
+<!-- If Admin is logged in -->
 <div *ngIf="admin">
-    <p>Welcome Admin</p>
+    <h1>Welcome Admin</h1>
+    <hr>
+    <h4>HRID: {{Hr.hrid}}</h4>
+    <h4>Name: {{Hr.name}}</h4>
+    <h4>Salary: {{Hr.salary}}</h4>
+    <h4>Status: {{Hr.status}}</h4>
+    <h4>Hiring Date: {{Hr.hiringDate}}</h4>
+    <hr>
     <table class="table table-dark">
         <thead>
             <tr>
-                <th scope="col">Department Name</th>
-                <th scope="col">Appointment Date</th>
-                <th scope="col"></th>
+                <th scope="col">Select</th>
+                <th scope="col">HRID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Salary</th>
+                <th scope="col">Status</th>
+                <th scope="col">Hiring Date</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let app of appointments" >
-                <th scope="row">{{app.department_name}}</th>
-                <td>{{app.appointment_date}}</td>
-                <td *ngIf="app.taken===0" ><a (click)="appointmentService.bookAppointment(app)" class="btn btn-primary">Book appointment</a></td>
-                <td *ngIf="app.taken===1" >Appointment already booked</td>
+            <tr *ngFor="let hr of Hrs" >
+                <th><button (click)="getHrById(hr.hrid)" >Get</button></th>
+                <th scope="row">{{hr.hrid}}</th>
+                <td>{{hr.name}}</td>
+                <td>{{hr.salary}}</td>
+                <td>{{hr.status}}</td>
+                <td>{{hr.hiringDate}}</td>
             </tr>
         </tbody>
     </table>
+    <div>
+        <button [routerLink]="['/add']">Add New</button>
+        <button>Update</button>
+        <button (click)="openModal(template)">Delete</button>
+        <button [disabled]="Hr.status === 'Approved'" (click)="approveHr()" >Approve</button>
+    </div>
 </div>
+<br><br>
+<ng-template #template>
+  <div class="modal-body text-center">
+    <p>Confirm delete Hr?</p>
+    <button type="button" class="btn btn-default" (click)="confirm()" >Yes</button>
+    <button type="button" class="btn btn-primary" (click)="decline()" >No</button>
+  </div>
+</ng-template>

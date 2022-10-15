@@ -12,6 +12,8 @@ import { HomeComponent } from './home/home.component';
 import { UpdateComponent } from './update/update.component';
 import { ToastrModule } from 'ngx-toastr';
 import { JwtInterceptor } from './interceptors/jwt.interceptor';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { AddHrComponent } from './add-hr/add-hr.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { JwtInterceptor } from './interceptors/jwt.interceptor';
     NavComponent,
     LoginComponent,
     HomeComponent,
-    UpdateComponent
+    UpdateComponent,
+    AddHrComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { JwtInterceptor } from './interceptors/jwt.interceptor';
     FormsModule,
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right'
-    })
+    }),
+    ModalModule.forRoot()
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}
